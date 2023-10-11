@@ -8,16 +8,20 @@ const pokemonList = [
     },
   ];
   
-  function PokemonCard() {
+  function PokemonCard(props) {
     const pokemonIndex = 0; 
     const pokemon = pokemonList[pokemonIndex];
-  
+    console.log(props)
     return (
+      <> 
       <figure>
         {pokemon ? (<> <img src={pokemon.imgSrc} alt={pokemon.name} />  <figcaption>{pokemon.name}</figcaption> </>  ) : (
           <p>???</p>
         )}
+        
       </figure>
+      
+      </>
     );
   }
   
